@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
                 'Aaron McTavish' => 'aamct@ustwo.com' }
   s.source = { :git => 'https://github.com/ustwo/formvalidator-swift.git', :tag => s.version }
 
-  s.ios.deployment_target = '8.3'
+  s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '9.0'
   s.osx.deployment_target = '10.11'
 
