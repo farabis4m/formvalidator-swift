@@ -53,6 +53,12 @@
 		00F2E2DA1C46C53500FE0B66 /* NotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2D91C46C53500FE0B66 /* NotCondition.swift */; };
 		00F2E2DE1C46C69D00FE0B66 /* PresentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2DD1C46C69D00FE0B66 /* PresentCondition.swift */; };
 		00F2E2E21C46C7B500FE0B66 /* PasswordStrengthCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2E11C46C7B500FE0B66 /* PasswordStrengthCondition.swift */; };
+		00F2E2E41C46CBC200FE0B66 /* PasswordStrengthConditionTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2E31C46CBC200FE0B66 /* PasswordStrengthConditionTests.swift */; };
+		88644DA71E2967F7006B0150 /* ValidatorTextFieldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88644DA61E2967F7006B0150 /* ValidatorTextFieldTests.swift */; };
+		88644DA91E296AEC006B0150 /* ValidatorTextViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 88644DA81E296AEC006B0150 /* ValidatorTextViewTests.swift */; };
+		8DB69F2E1FDBF1B100D36173 /* ErrorMessageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F2D1FDBF1B100D36173 /* ErrorMessageProvider.swift */; };
+		8DB69F301FDC0A3500D36173 /* PlistManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F2F1FDC0A3500D36173 /* PlistManager.swift */; };
+		8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F311FDC0A8C00D36173 /* Language.swift */; };
 		BAF88F201DCA3BFF001845D1 /* CreditCardCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F1F1DCA3BFF001845D1 /* CreditCardCondition.swift */; };
 		BAF88F261DCA4166001845D1 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */; };
 /* End PBXBuildFile section */
@@ -151,6 +157,9 @@
 		00F2E2E31C46CBC200FE0B66 /* PasswordStrengthConditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordStrengthConditionTests.swift; sourceTree = "<group>"; };
 		88644DA61E2967F7006B0150 /* ValidatorTextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorTextFieldTests.swift; path = Controls/ValidatorTextFieldTests.swift; sourceTree = "<group>"; };
 		88644DA81E296AEC006B0150 /* ValidatorTextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorTextViewTests.swift; path = Controls/ValidatorTextViewTests.swift; sourceTree = "<group>"; };
+		8DB69F2D1FDBF1B100D36173 /* ErrorMessageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageProvider.swift; sourceTree = "<group>"; };
+		8DB69F2F1FDC0A3500D36173 /* PlistManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlistManager.swift; sourceTree = "<group>"; };
+		8DB69F311FDC0A8C00D36173 /* Language.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Language.swift; sourceTree = "<group>"; };
 		BA6C8FAD1DC77E2200AFE4C4 /* tr */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = tr; path = tr.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BAF88F1F1DCA3BFF001845D1 /* CreditCardCondition.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardCondition.swift; sourceTree = "<group>"; };
 		BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
@@ -194,6 +203,7 @@
 		002C04231C454A98005CC374 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
+				8DB69F2C1FDBF18900D36173 /* Error Message Handler */,
 				0032C1041C454EDF0023DB19 /* Conditions */,
 				000A5B4F1E1B8AB7001DC2FF /* Configurations */,
 				003698331C46E200004D1692 /* Controls */,
@@ -405,6 +415,16 @@
 			name = Controls;
 			sourceTree = "<group>";
 		};
+		8DB69F2C1FDBF18900D36173 /* Error Message Handler */ = {
+			isa = PBXGroup;
+			children = (
+				8DB69F2D1FDBF1B100D36173 /* ErrorMessageProvider.swift */,
+				8DB69F2F1FDC0A3500D36173 /* PlistManager.swift */,
+				8DB69F311FDC0A8C00D36173 /* Language.swift */,
+			);
+			path = "Error Message Handler";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -534,6 +554,7 @@
 				004913A81C47B08C00471F53 /* PasswordStrengthValidator.swift in Sources */,
 				000A5B511E1B8ACD001DC2FF /* AlphabeticConfiguration.swift in Sources */,
 				0094D67B1C4698CE00145F5C /* NumericCondition.swift in Sources */,
+				8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */,
 				000A5B571E1B8EB4001DC2FF /* ConfigurableCondition.swift in Sources */,
 				002DDD091E1D2DFB007796C6 /* PostcodeConfiguration.swift in Sources */,
 				0049139E1C47ADCA00471F53 /* EmailValidator.swift in Sources */,
@@ -549,9 +570,11 @@
 				000A5B601E1B9243001DC2FF /* RangeConfiguration.swift in Sources */,
 				004913A21C47AE5D00471F53 /* PostcodeValidator.swift in Sources */,
 				0032C10A1C4555200023DB19 /* AlphabeticCondition.swift in Sources */,
+				8DB69F2E1FDBF1B100D36173 /* ErrorMessageProvider.swift in Sources */,
 				000A5B541E1B8D67001DC2FF /* AlphanumericConfiguration.swift in Sources */,
 				000A5B631E1B9522001DC2FF /* Configuration.swift in Sources */,
 				004913B91C47BEEC00471F53 /* ValidatorTextView-UIKit.swift in Sources */,
+				8DB69F301FDC0A3500D36173 /* PlistManager.swift in Sources */,
 				00A6A0A91E1D023100EDB521 /* CreditCardConfiguration.swift in Sources */,
 				0032C1071C454F4E0023DB19 /* Condition.swift in Sources */,
 				004913AE1C47B15D00471F53 /* URLShorthandValidator.swift in Sources */,
