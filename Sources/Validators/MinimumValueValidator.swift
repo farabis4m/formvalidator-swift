@@ -31,10 +31,10 @@ public struct MinimumValueValidator: Validator {
         conditions = [presentCondition,minimumValueCondition]
     }
     
-    public static func checkValue(ioValue: AutoreleasingUnsafeMutablePointer<AnyObject?>, minValue:AnyObject?, errorCode:String) throws -> Bool {
+    public static func checkValue(ioValue: AnyObject?, minValue:AnyObject?, errorCode:String) throws -> Bool {
         
         let validator = MinimumValueValidator(minimumValue: minValue, errorCode: errorCode)
-        let conditions = validator.checkConditions(ioValue.pointee)
+        let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
