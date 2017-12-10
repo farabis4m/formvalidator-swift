@@ -25,6 +25,7 @@ public struct NotCondition: Condition {
     
     public let condition: Condition
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

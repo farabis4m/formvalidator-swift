@@ -27,6 +27,7 @@ public struct PostcodeCondition: ConfigurableCondition {
     
     public var configuration: PostcodeConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializer
     

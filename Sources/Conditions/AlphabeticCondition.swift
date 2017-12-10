@@ -25,6 +25,7 @@ public struct AlphabeticCondition: ConfigurableCondition {
     
     public let configuration: AlphabeticConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

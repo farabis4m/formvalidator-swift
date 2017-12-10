@@ -35,6 +35,7 @@ public struct PasswordStrengthCondition: ConfigurableCondition {
     
     public let configuration: PasswordStrengthConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

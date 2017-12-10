@@ -25,6 +25,7 @@ public struct AndCondition: Condition {
     
     public let conditions: [Condition]
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

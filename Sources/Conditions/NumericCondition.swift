@@ -25,6 +25,7 @@ public struct NumericCondition: ConfigurableCondition {
     
     public let configuration: NumericConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

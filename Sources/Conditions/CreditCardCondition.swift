@@ -26,6 +26,7 @@ public struct CreditCardCondition: ConfigurableCondition {
     
     public var configuration: CreditCardConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

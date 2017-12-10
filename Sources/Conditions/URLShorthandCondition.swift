@@ -24,6 +24,7 @@ public struct URLShorthandCondition: Condition {
     
     public var shouldAllowViolation = true
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     

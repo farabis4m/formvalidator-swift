@@ -25,6 +25,7 @@ public struct RangeCondition: ConfigurableCondition {
     
     public let configuration: RangeConfiguration
     
+    public var errorCode: String = ""
     
     // MARK: - Initializers
     
