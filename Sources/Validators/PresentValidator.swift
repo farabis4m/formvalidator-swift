@@ -27,4 +27,20 @@ public struct PresentValidator: Validator {
         conditions = [PresentCondition()]
     }
     
+    public static func checkValue(ioValue: AutoreleasingUnsafeMutablePointer<AnyObject?>, errorCode:String) throws -> Bool {
+        
+        let validator = PresentValidator()
+        let conditions = validator.checkConditions(ioValue.pointee)
+        //         validator.errorCode = errorCode
+        
+        guard conditions == nil else {
+            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+                throw error
+            }
+            return false
+        }
+        
+        return true
+    }
 }
+

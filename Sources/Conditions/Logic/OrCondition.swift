@@ -40,8 +40,8 @@ public struct OrCondition: Condition {
     
     // MARK: - Check
     
-    public func check(_ text: String?) -> Bool {
-        return conditions.reduce(false, { $0 || $1.check(text) })
+    public func check(_ value: AnyObject?) -> Bool {
+        return conditions.reduce(false, { $0 || $1.check(value) })
     }
     
 }

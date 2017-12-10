@@ -27,7 +27,7 @@ public protocol Validator {
      - parameter text: `String` to check.
      - returns: An array of conditions that were violated by `text`. If no conditions were violated then `nil` is returned.
      */
-    func checkConditions(_ text: String?) -> [Condition]?
+    func checkConditions(_ value: AnyObject?) -> [Condition]?
     
     /**
      Removes all conditions of `conditionClass` type.
@@ -41,8 +41,8 @@ public protocol Validator {
 // Default implementation for `addCondition`, `checkConditions`, and `removeConditionOfClass`.
 public extension Validator {
     
-    func checkConditions(_ text: String?) -> [Condition]? {
-        let violations = conditions.filter { !($0.check(text)) }
+    func checkConditions(_ value: AnyObject?) -> [Condition]? {
+        let violations = conditions.filter { !($0.check(value)) }
         
         return violations.isEmpty ? nil : violations
     }

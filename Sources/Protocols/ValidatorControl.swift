@@ -31,7 +31,7 @@ public protocol ValidatorControl: class, Validatable {
 public extension ValidatorControl {
     
     var isValid: Bool {
-        return validator.checkConditions(validatableText) == nil
+        return validator.checkConditions(validatableText as AnyObject) == nil
     }
     
 }

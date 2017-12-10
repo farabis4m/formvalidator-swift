@@ -31,12 +31,19 @@ public struct PresentCondition: Condition {
     
     // MARK: - Check
     
-    public func check(_ text: String?) -> Bool {
-        guard let sourceText = text else {
+    public func check(_ value: AnyObject?) -> Bool {
+        guard let value = value else {
             return false
         }
         
-        return !sourceText.isEmpty
+        if let stringValue = value as? String {
+            return stringValue.trimmingCharacters(in: CharacterSet.whitespaces).count > 0
+        } else if let decimalNumberValue = value as? NSDecimalNumber {
+            return decimalNumberValue.floatValue >= 0.0 ? true : false
+        } else if let numberValue = value as? NSNumber {
+            return numberValue.intValue > 0 ? true : false
+        }
+        return true
     }
-    
 }
+

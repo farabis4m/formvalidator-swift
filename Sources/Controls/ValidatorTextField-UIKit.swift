@@ -135,7 +135,7 @@ internal class ValidatorTextFieldResponder: NSObject, UITextFieldDelegate {
         
         let inputText = validatorTextField.text
         
-        let conditions = validatorTextField.validator.checkConditions(inputText)
+        let conditions = validatorTextField.validator.checkConditions(inputText as AnyObject)
         let isValid = conditions == nil
         if lastIsValid != isValid {
             lastIsValid = isValid
@@ -167,7 +167,7 @@ internal class ValidatorTextFieldResponder: NSObject, UITextFieldDelegate {
         let originalString = NSString(string: sourceText)
     
         let futureString = originalString.replacingCharacters(in: range, with: string)
-        let conditions = validatorTextField.validator.checkConditions(futureString)
+        let conditions = validatorTextField.validator.checkConditions(futureString as AnyObject)
     
         if let conditions = conditions {
             validatorTextField.validatorTextFieldViolatedConditions(conditions)
