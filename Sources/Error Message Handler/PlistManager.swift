@@ -15,7 +15,7 @@ class PlistManager {
     private init() {
         //Intialization
     }
-
+    
     // localizations
     lazy var localizations: [String: Any] = {
         return PlistManager.shared.loadDictionary(for: Paths.strings)
@@ -38,5 +38,6 @@ extension PlistManager {
         static let strings = Bundle.main.path(forResource: "Strings", ofType: "plist")
         static let errors = Bundle.main.path(forResource: "Error", ofType: "plist")
     }
-
+    
 }
+

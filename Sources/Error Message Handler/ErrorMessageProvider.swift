@@ -22,14 +22,15 @@ class ErrorMessageProvider {
     func error(code: String, parameters: String?...) -> Error? {
         
         let moduleKeyPath = code[ 0..<2]
-        let serviceKeyPath = code[2..<code.count]
-        let errorKeyPath = code[4..<code.count - 4]
-
+        let serviceKeyPath = code[2..<4]
+        let errorKeyPath = code[4..<code.count]
+        
         guard let module = PlistManager.shared.errors[moduleKeyPath] as? [String : Any],
             let service  = module[serviceKeyPath] as? [String: Any],
             let errorKey = service[errorKeyPath] as? String else { return NSError(domain:"", code: 0, userInfo:[NSLocalizedDescriptionKey:"Key Not found in error plist"]) }
-  
-        let userInfo: [AnyHashable : Any] = [NSLocalizedDescriptionKey :  &&errorKey]
+        
+        let userInfo: [String : String] = [NSLocalizedDescriptionKey :  &&(errorKey)]
+        print(Language.localize(errorKey))
         return NSError(domain:"", code: 0, userInfo: userInfo)
     }
     

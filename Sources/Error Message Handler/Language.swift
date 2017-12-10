@@ -33,7 +33,7 @@ extension Language {
 }
 
 extension Language {
-
+    
     /// current language if user has preferred one or the device language
     static var current: Language {
         get {
@@ -71,3 +71,4 @@ extension Language {
         return localizedString
     }
 }
+
