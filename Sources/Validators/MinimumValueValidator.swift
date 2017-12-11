@@ -25,13 +25,13 @@ public struct MinimumValueValidator: Validator {
         conditions = [PresentCondition()]
     }
     
-    public init(minimumValue: AnyObject?, errorCode: String) {
+    public init(minimumValue: Any?, errorCode: String) {
         let presentCondition = PresentCondition()
         let minimumValueCondition = MinimumConditions(minimumValue: minimumValue, errorCode: errorCode)
         conditions = [presentCondition,minimumValueCondition]
     }
     
-    public static func checkValue(ioValue: AnyObject?, minValue:AnyObject?, errorCode:String) throws -> Bool {
+    public static func checkValue(ioValue: Any?, minValue:Any?, errorCode:String) throws -> Bool {
         
         let validator = MinimumValueValidator(minimumValue: minValue, errorCode: errorCode)
         let conditions = validator.checkConditions(ioValue)

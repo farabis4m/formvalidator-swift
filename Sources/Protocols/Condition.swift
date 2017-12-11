@@ -42,14 +42,14 @@ public protocol Condition: CustomStringConvertible {
      - returns: Whether the condition check passed or failed.
      - note: Checking a `nil` value should always return `false`.
      */
-    func check(_ value: AnyObject?) -> Bool
+    func check(_ value: Any?) -> Bool
 }
 
 
 // Default implementation of `Condition.check(text:)` returns `true` if the `regex` is valid and there is at least one match in `text`.
 public extension Condition {
     
-    func check(_ value: AnyObject?) -> Bool {
+    func check(_ value: Any?) -> Bool {
         guard let sourceText = value as? String,
             let regExpression = try? NSRegularExpression(pattern: regex, options: .caseInsensitive) else {
                 return false

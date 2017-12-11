@@ -27,7 +27,7 @@ public struct AlphanumericValidator: ConfigurableValidator {
         conditions = [AlphanumericCondition(configuration: configuration)]
     }
     
-    public static func checkValue(ioValue: AutoreleasingUnsafeMutablePointer<AnyObject?>, errorCode:String) throws -> Bool {
+    public static func checkValue(ioValue: Any, errorCode:String) throws -> Bool {
         
         let validator = AlphanumericValidator()
         let conditions = validator.checkConditions(ioValue.pointee)

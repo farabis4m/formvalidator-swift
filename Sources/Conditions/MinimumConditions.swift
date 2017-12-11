@@ -18,18 +18,18 @@ public struct MinimumConditions: Condition {
     
     public var errorCode: String = ""
     
-    public var minimumValue : AnyObject?
+    public var minimumValue : Any?
     // MARK: - Initializers
     
     public init() { }
     
-    init(minimumValue: AnyObject?, errorCode: String) {
+    init(minimumValue: Any?, errorCode: String) {
         self.init()
         self.errorCode = errorCode
         self.minimumValue = minimumValue
     }
     
-    public func check(_ value: AnyObject?) -> Bool {
+    public func check(_ value: Any?) -> Bool {
         
         var minValue = value
         if (minValue is String) {

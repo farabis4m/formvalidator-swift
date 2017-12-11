@@ -27,7 +27,7 @@ public struct PresentValidator: Validator {
         conditions = [PresentCondition()]
     }
     
-    public static func checkValue(ioValue: AnyObject?, errorCode:String) throws -> Bool {
+    public static func checkValue(ioValue: Any?, errorCode:String) throws -> Bool {
         
         let validator = PresentValidator()
         let conditions = validator.checkConditions(ioValue)
