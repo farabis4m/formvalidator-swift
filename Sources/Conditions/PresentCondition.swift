@@ -36,7 +36,7 @@ public struct PresentCondition: Condition {
             return false
         }
         
-        if let nullValue = value as? NSNull {
+        if let _ = value as? NSNull {
             return false
         }
         if let stringValue = value as? String {
