@@ -36,6 +36,9 @@ public struct PresentCondition: Condition {
             return false
         }
         
+        if let nullValue = value as? NSNull {
+            return false
+        }
         if let stringValue = value as? String {
             return stringValue.trimmingCharacters(in: CharacterSet.whitespaces).count > 0
         } else if let decimalNumberValue = value as? NSDecimalNumber {
