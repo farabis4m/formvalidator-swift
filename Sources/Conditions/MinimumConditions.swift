@@ -30,19 +30,21 @@ public struct MinimumConditions: Condition {
     }
     
     public func check(_ value: Any?) -> Bool {
-        
-        var minValue = value
-        if (minValue is String) {
-            let f = NumberFormatter()
-            f.numberStyle = .decimal
-            minValue = (f.number(from: minValue as? String ?? "")) ?? 0
-        }
-        
-        if let minValue1 = minValue as? NSDecimalNumber, let minValue2 = self.minimumValue as? NSDecimalNumber, minValue1.compare(minValue2) == .orderedAscending {
+
+        let inputC = "\(value ?? "")".trimmingCharacters(in: .whitespaces)
+        guard inputC.count > 0 else {
             return false
         }
         
-        return true
+        let f = NumberFormatter()
+        f.numberStyle = .decimal
+        
+        let minValue = "\(self.minimumValue ?? "")"
+
+        if let inputN = (f.number(from: inputC)), let minValue = f.number(from: minValue) {
+            return inputN.compare(minValue) == .orderedDescending
+        }
+        return false
     }
 }
 

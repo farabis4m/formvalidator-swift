@@ -32,21 +32,19 @@ public struct PresentCondition: Condition {
     // MARK: - Check
     
     public func check(_ value: Any?) -> Bool {
-        guard let value = value else {
+        
+        let inputC = "\(value ?? "")".trimmingCharacters(in: .whitespaces)
+        guard inputC.count > 0 else {
             return false
         }
         
-        if let _ = value as? NSNull {
-            return false
+        let f = NumberFormatter()
+        f.numberStyle = .decimal
+
+        if let inputN = f.number(from: inputC) {
+            return inputN.intValue > 0
         }
-        if let stringValue = value as? String {
-            return stringValue.trimmingCharacters(in: CharacterSet.whitespaces).count > 0
-        } else if let decimalNumberValue = value as? NSDecimalNumber {
-            return decimalNumberValue.floatValue >= 0.0 ? true : false
-        } else if let numberValue = value as? NSNumber {
-            return numberValue.intValue > 0 ? true : false
-        }
-        return true
+        return false
     }
 }
 
