@@ -31,7 +31,7 @@ public struct PresentCondition: Condition {
     
     // MARK: - Check
     
-    public func check(_ value: AnyObject?) -> Bool {
+    public func check(_ value: Any?) -> Bool {
         guard let value = value else {
             return false
         }

@@ -40,7 +40,7 @@ public struct NotCondition: Condition {
     
     // MARK: - Check
     
-    public func check(_ value: AnyObject?) -> Bool {
+    public func check(_ value: Any?) -> Bool {
         return !condition.check(value)
     }
     

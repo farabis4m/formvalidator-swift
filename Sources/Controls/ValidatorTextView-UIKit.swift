@@ -120,7 +120,7 @@ internal class ValidatorTextViewResponder: NSObject, UITextViewDelegate {
         let originalString = NSString(string: sourceText!)
         
         let futureString = originalString.replacingCharacters(in: range, with: text)
-        let conditions = validatorTextView.validator.checkConditions(futureString as AnyObject)
+        let conditions = validatorTextView.validator.checkConditions(futureString)
         
         if let conditions = conditions {
             validatorTextView.validatorTextViewViolatedConditions(conditions)
@@ -154,7 +154,7 @@ internal class ValidatorTextViewResponder: NSObject, UITextViewDelegate {
                 return
         }
         
-        let conditions = validatorTextView.validator.checkConditions(validatorTextView.text as AnyObject)
+        let conditions = validatorTextView.validator.checkConditions(validatorTextView.text)
         let isValid = conditions == nil
         if lastIsValid != isValid {
             lastIsValid = isValid

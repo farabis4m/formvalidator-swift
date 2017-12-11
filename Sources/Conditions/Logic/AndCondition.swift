@@ -40,7 +40,7 @@ public struct AndCondition: Condition {
     
     // MARK: - Check
     
-    public func check(_ value: AnyObject?) -> Bool {
+    public func check(_ value: Any?) -> Bool {
         return conditions.reduce(true, { $0 && $1.check(value) })
     }
     

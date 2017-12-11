@@ -30,7 +30,7 @@ public struct AlphanumericValidator: ConfigurableValidator {
     public static func checkValue(ioValue: Any, errorCode:String) throws -> Bool {
         
         let validator = AlphanumericValidator()
-        let conditions = validator.checkConditions(ioValue.pointee)
+        let conditions = validator.checkConditions(ioValue)
         // validator.errorCode = errorCode
         
         guard conditions == nil else {

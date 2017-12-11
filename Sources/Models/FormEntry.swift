@@ -30,7 +30,7 @@ public struct FormEntry {
     - returns: An array of conditions that were violated. If no conditions were violated then `nil` is returned.
     */
     public func checkConditions() -> [Condition]? {
-        return validator.checkConditions(validatable.validatableText as AnyObject)
+        return validator.checkConditions(validatable.validatableText)
     }
     
 }
