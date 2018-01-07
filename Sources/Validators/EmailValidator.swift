@@ -26,7 +26,7 @@ public struct EmailValidator: Validator {
     public init() {
         conditions = [EmailCondition()]
     }
-
+    
     public static func checkValue(ioValue: AnyObject?, errorCode:String) throws -> Bool {
         
         let validator = EmailValidator()
@@ -42,5 +42,5 @@ public struct EmailValidator: Validator {
         
         return true
     }
-    
 }
+
