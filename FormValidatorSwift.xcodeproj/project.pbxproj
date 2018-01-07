@@ -60,6 +60,8 @@
 		8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F311FDC0A8C00D36173 /* Language.swift */; };
 		BAF88F201DCA3BFF001845D1 /* CreditCardCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F1F1DCA3BFF001845D1 /* CreditCardCondition.swift */; };
 		BAF88F261DCA4166001845D1 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */; };
+		C61391872002502300A14CBF /* MinimumLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391862002502300A14CBF /* MinimumLengthValidator.swift */; };
+		C61391892002504700A14CBF /* MinimumLengthConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391882002504700A14CBF /* MinimumLengthConditions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -166,6 +168,8 @@
 		BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
 		BAF88F2A1DCA4201001845D1 /* CreditCardConditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardConditionTests.swift; sourceTree = "<group>"; };
 		BAF88F2F1DCA566C001845D1 /* CreditCardValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidatorTests.swift; sourceTree = "<group>"; };
+		C61391862002502300A14CBF /* MinimumLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthValidator.swift; sourceTree = "<group>"; };
+		C61391882002504700A14CBF /* MinimumLengthConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthConditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +282,7 @@
 				0094D67E1C469A0E00145F5C /* PostcodeCondition.swift */,
 				00F2E2DD1C46C69D00FE0B66 /* PresentCondition.swift */,
 				8D9D24081FDD3626008719A8 /* MinimumConditions.swift */,
+				C61391882002504700A14CBF /* MinimumLengthConditions.swift */,
 				0094D6981C46B37900145F5C /* RangeCondition.swift */,
 				0094D6831C469BA500145F5C /* URLCondition.swift */,
 				0094D6851C469C2A00145F5C /* URLShorthandCondition.swift */,
@@ -298,6 +303,7 @@
 				004913A11C47AE5D00471F53 /* PostcodeValidator.swift */,
 				004913A31C47AE9F00471F53 /* PresentValidator.swift */,
 				8D9D24061FDD32D5008719A8 /* MinimumValueValidator.swift */,
+				C61391862002502300A14CBF /* MinimumLengthValidator.swift */,
 				004913A91C47B0F200471F53 /* RangeValidator.swift */,
 				004913AB1C47B13000471F53 /* URLValidator.swift */,
 				004913AD1C47B15D00471F53 /* URLShorthandValidator.swift */,
@@ -583,7 +589,9 @@
 				00A6A0A91E1D023100EDB521 /* CreditCardConfiguration.swift in Sources */,
 				0032C1071C454F4E0023DB19 /* Condition.swift in Sources */,
 				004913AE1C47B15D00471F53 /* URLShorthandValidator.swift in Sources */,
+				C61391872002502300A14CBF /* MinimumLengthValidator.swift in Sources */,
 				000A5B5D1E1B9048001DC2FF /* PasswordStrengthConfiguration.swift in Sources */,
+				C61391892002504700A14CBF /* MinimumLengthConditions.swift in Sources */,
 				0094D6841C469BA500145F5C /* URLCondition.swift in Sources */,
 				004913AA1C47B0F200471F53 /* RangeValidator.swift in Sources */,
 				005675591C47E493005A43F0 /* ControlForm.swift in Sources */,
