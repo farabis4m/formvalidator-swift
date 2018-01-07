@@ -29,4 +29,10 @@ public struct EmailCondition: Condition {
     
     public init() { }
     
+    public func check(_ value: AnyObject?) -> Bool {
+        
+        let emailTest = NSPredicate(format:"SELF MATCHES %@", regex)
+        return emailTest.evaluate(with: value)
+        
+    }
 }

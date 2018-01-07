@@ -26,5 +26,21 @@ public struct EmailValidator: Validator {
     public init() {
         conditions = [EmailCondition()]
     }
+
+    public static func checkValue(ioValue: AnyObject?, errorCode:String) throws -> Bool {
+        
+        let validator = EmailValidator()
+        let conditions = validator.checkConditions(ioValue)
+        //         validator.errorCode = errorCode
+        
+        guard conditions == nil else {
+            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+                throw error
+            }
+            return false
+        }
+        
+        return true
+    }
     
 }
