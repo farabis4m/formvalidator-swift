@@ -60,6 +60,8 @@
 		8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F311FDC0A8C00D36173 /* Language.swift */; };
 		BAF88F201DCA3BFF001845D1 /* CreditCardCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F1F1DCA3BFF001845D1 /* CreditCardCondition.swift */; };
 		BAF88F261DCA4166001845D1 /* CreditCardValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */; };
+		C6011D2B200258D8008FC1D4 /* ExactLengthCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6011D2A200258D8008FC1D4 /* ExactLengthCondition.swift */; };
+		C6011D2D200259AD008FC1D4 /* ExactLenghtValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6011D2C200259AD008FC1D4 /* ExactLenghtValidator.swift */; };
 		C61391872002502300A14CBF /* MinimumLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391862002502300A14CBF /* MinimumLengthValidator.swift */; };
 		C61391892002504700A14CBF /* MinimumLengthConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391882002504700A14CBF /* MinimumLengthConditions.swift */; };
 /* End PBXBuildFile section */
@@ -168,6 +170,8 @@
 		BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidator.swift; sourceTree = "<group>"; };
 		BAF88F2A1DCA4201001845D1 /* CreditCardConditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardConditionTests.swift; sourceTree = "<group>"; };
 		BAF88F2F1DCA566C001845D1 /* CreditCardValidatorTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CreditCardValidatorTests.swift; sourceTree = "<group>"; };
+		C6011D2A200258D8008FC1D4 /* ExactLengthCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactLengthCondition.swift; sourceTree = "<group>"; };
+		C6011D2C200259AD008FC1D4 /* ExactLenghtValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactLenghtValidator.swift; sourceTree = "<group>"; };
 		C61391862002502300A14CBF /* MinimumLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthValidator.swift; sourceTree = "<group>"; };
 		C61391882002504700A14CBF /* MinimumLengthConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthConditions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -282,6 +286,7 @@
 				0094D67E1C469A0E00145F5C /* PostcodeCondition.swift */,
 				00F2E2DD1C46C69D00FE0B66 /* PresentCondition.swift */,
 				8D9D24081FDD3626008719A8 /* MinimumConditions.swift */,
+				C6011D2A200258D8008FC1D4 /* ExactLengthCondition.swift */,
 				C61391882002504700A14CBF /* MinimumLengthConditions.swift */,
 				0094D6981C46B37900145F5C /* RangeCondition.swift */,
 				0094D6831C469BA500145F5C /* URLCondition.swift */,
@@ -304,6 +309,7 @@
 				004913A31C47AE9F00471F53 /* PresentValidator.swift */,
 				8D9D24061FDD32D5008719A8 /* MinimumValueValidator.swift */,
 				C61391862002502300A14CBF /* MinimumLengthValidator.swift */,
+				C6011D2C200259AD008FC1D4 /* ExactLenghtValidator.swift */,
 				004913A91C47B0F200471F53 /* RangeValidator.swift */,
 				004913AB1C47B13000471F53 /* URLValidator.swift */,
 				004913AD1C47B15D00471F53 /* URLShorthandValidator.swift */,
@@ -567,10 +573,12 @@
 				0094D67B1C4698CE00145F5C /* NumericCondition.swift in Sources */,
 				8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */,
 				000A5B571E1B8EB4001DC2FF /* ConfigurableCondition.swift in Sources */,
+				C6011D2B200258D8008FC1D4 /* ExactLengthCondition.swift in Sources */,
 				002DDD091E1D2DFB007796C6 /* PostcodeConfiguration.swift in Sources */,
 				0049139E1C47ADCA00471F53 /* EmailValidator.swift in Sources */,
 				00F2E2DA1C46C53500FE0B66 /* NotCondition.swift in Sources */,
 				0094D6861C469C2A00145F5C /* URLShorthandCondition.swift in Sources */,
+				C6011D2D200259AD008FC1D4 /* ExactLenghtValidator.swift in Sources */,
 				004913B01C47B1B400471F53 /* CompositeValidator.swift in Sources */,
 				004913AC1C47B13000471F53 /* URLValidator.swift in Sources */,
 				004913B71C47BB9800471F53 /* FormEntry.swift in Sources */,
