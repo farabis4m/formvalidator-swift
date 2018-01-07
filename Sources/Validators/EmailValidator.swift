@@ -8,7 +8,6 @@
 
 import Foundation
 
-
 /**
  *  The `EmailValidator` contains an `EmailCondition`. A valid string is an email address.
  *  - seealso: `EmailCondition`
