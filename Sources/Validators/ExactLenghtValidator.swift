@@ -21,15 +21,15 @@ public struct ExactLenghtValidator: Validator {
         conditions = [ExactLengthCondition()]
     }
     
-    public init(exactLength: Int?, errorCode: String) {
+    public init(exactLength: Int?, errorCode: String, error: Error?) {
         let presentCondition = PresentCondition()
-        let exactLengthCondition = ExactLengthCondition(exactLength: exactLength, errorCode: errorCode)
+        let exactLengthCondition = ExactLengthCondition(exactLength: exactLength, errorCode: errorCode, error: error)
         conditions = [presentCondition,exactLengthCondition]
     }
     
-    public static func checkValue(ioValue: AnyObject?, exactLength:Int?, errorCode:String) throws -> Bool {
+    public static func checkValue(ioValue: AnyObject?, exactLength:Int?, errorCode:String, error: Error?) throws -> Bool {
         
-        let validator = ExactLenghtValidator(exactLength: exactLength, errorCode: errorCode)
+        let validator = ExactLenghtValidator(exactLength: exactLength, errorCode: errorCode, error: error)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         

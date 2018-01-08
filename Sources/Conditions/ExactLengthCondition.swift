@@ -18,15 +18,18 @@ public struct ExactLengthCondition: Condition {
     
     public var errorCode: String = ""
     
+    public var error: Error?
+    
     public var exactLength : Int?
     // MARK: - Initializers
     
     public init() { }
     
-    init(exactLength: Int?, errorCode: String) {
+    init(exactLength: Int?, errorCode: String, error: Error?) {
         self.init()
         self.errorCode = errorCode
         self.exactLength = exactLength
+        self.error = error
     }
     
     public func check(_ value: AnyObject?) -> Bool {
