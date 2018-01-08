@@ -23,9 +23,17 @@ public struct PresentCondition: Condition {
     
     public var errorCode: String = ""
     
+    public var error: Error?
+    
     // MARK: - Initializers
     
     public init() { }
+    
+    public init(errorCode: String, error: Error?) {
+        self.init()
+        self.errorCode = errorCode
+        self.error = error
+    }
     
     
     // MARK: - Check

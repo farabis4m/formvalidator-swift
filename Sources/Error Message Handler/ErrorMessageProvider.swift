@@ -8,18 +8,18 @@
 
 import Foundation
 
-class ErrorMessageProvider {
+public class ErrorMessageProvider {
     
-    static let sharedInstance = ErrorMessageProvider()
+    public static let sharedInstance = ErrorMessageProvider()
     init() {
         // initialization
     }
     
-    func errorWithCode(_ errorCode: String) -> Error? {
+    public func errorWithCode(_ errorCode: String) -> Error? {
         return error(code: errorCode, parameters: nil) ?? NSError(domain:"", code: 0, userInfo:nil)
     }
     
-    func error(code: String, parameters: String?...) -> Error? {
+    public func error(code: String, parameters: String?...) -> Error? {
         
         let moduleKeyPath = code[ 0..<2]
         let serviceKeyPath = code[2..<4]
