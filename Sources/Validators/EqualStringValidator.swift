@@ -8,10 +8,6 @@
 
 import Foundation
 
-/**
- *  The `MinimumValueValidator` contains an `PresentCondition`. A valid string is a non-empty string and also have some minimum value
- *
- */
 public struct EqualStringValidator: Validator {
     
     // MARK: - Properties

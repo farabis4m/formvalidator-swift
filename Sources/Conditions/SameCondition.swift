@@ -19,6 +19,7 @@ public struct SameCondition: Condition {
     public var errorCode: String = ""
     
     public var comparisonString: String?
+    
     // MARK: - Initializers
     
     public init() { }
