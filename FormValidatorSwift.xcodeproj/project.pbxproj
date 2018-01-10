@@ -67,6 +67,8 @@
 		C675F1022005DEA80023C89E /* SmartPassPinValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */; };
 		C675F1042005E8540023C89E /* PinPalindromeCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1032005E8540023C89E /* PinPalindromeCondition.swift */; };
 		C675F1062005E8740023C89E /* PinSeriesCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1052005E8740023C89E /* PinSeriesCondition.swift */; };
+		C675F10A2005FFE90023C89E /* EqualStringValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1092005FFE90023C89E /* EqualStringValidator.swift */; };
+		C675F10C200600580023C89E /* SameCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F10B200600580023C89E /* SameCondition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -180,6 +182,8 @@
 		C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPassPinValidator.swift; sourceTree = "<group>"; };
 		C675F1032005E8540023C89E /* PinPalindromeCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPalindromeCondition.swift; sourceTree = "<group>"; };
 		C675F1052005E8740023C89E /* PinSeriesCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSeriesCondition.swift; sourceTree = "<group>"; };
+		C675F1092005FFE90023C89E /* EqualStringValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EqualStringValidator.swift; sourceTree = "<group>"; };
+		C675F10B200600580023C89E /* SameCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SameCondition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -284,6 +288,7 @@
 			children = (
 				0094D6961C46B23D00145F5C /* Logic */,
 				0032C1091C4555200023DB19 /* AlphabeticCondition.swift */,
+				C675F10B200600580023C89E /* SameCondition.swift */,
 				C675F1032005E8540023C89E /* PinPalindromeCondition.swift */,
 				C675F1052005E8740023C89E /* PinSeriesCondition.swift */,
 				003E061E1C463CEB008D47F2 /* AlphanumericCondition.swift */,
@@ -307,6 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				003E06281C4648E5008D47F2 /* AlphabeticValidator.swift */,
+				C675F1092005FFE90023C89E /* EqualStringValidator.swift */,
 				0049139B1C47AC8200471F53 /* AlphanumericValidator.swift */,
 				BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */,
 				C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */,
@@ -563,6 +569,7 @@
 			files = (
 				000D64E91E1F91FD0067B14E /* NumericConfiguration.swift in Sources */,
 				004913A41C47AE9F00471F53 /* PresentValidator.swift in Sources */,
+				C675F10C200600580023C89E /* SameCondition.swift in Sources */,
 				004913A01C47AE0700471F53 /* NumericValidator.swift in Sources */,
 				0094D69B1C46B38200145F5C /* OrCondition.swift in Sources */,
 				BAF88F201DCA3BFF001845D1 /* CreditCardCondition.swift in Sources */,
@@ -570,6 +577,7 @@
 				0094D67F1C469A0E00145F5C /* PostcodeCondition.swift in Sources */,
 				004913B41C47B3EA00471F53 /* Validatable.swift in Sources */,
 				8D9D24091FDD3626008719A8 /* MinimumConditions.swift in Sources */,
+				C675F10A2005FFE90023C89E /* EqualStringValidator.swift in Sources */,
 				000A5B661E1B986D001DC2FF /* ConfigurableValidator.swift in Sources */,
 				0094D6761C4696F400145F5C /* EmailCondition.swift in Sources */,
 				003E06271C46413C008D47F2 /* Validator.swift in Sources */,
