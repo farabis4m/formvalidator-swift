@@ -64,6 +64,9 @@
 		C6011D2D200259AD008FC1D4 /* ExactLenghtValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6011D2C200259AD008FC1D4 /* ExactLenghtValidator.swift */; };
 		C61391872002502300A14CBF /* MinimumLengthValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391862002502300A14CBF /* MinimumLengthValidator.swift */; };
 		C61391892002504700A14CBF /* MinimumLengthConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C61391882002504700A14CBF /* MinimumLengthConditions.swift */; };
+		C675F1022005DEA80023C89E /* SmartPassPinValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */; };
+		C675F1042005E8540023C89E /* PinPalindromeCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1032005E8540023C89E /* PinPalindromeCondition.swift */; };
+		C675F1062005E8740023C89E /* PinSeriesCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = C675F1052005E8740023C89E /* PinSeriesCondition.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -174,6 +177,9 @@
 		C6011D2C200259AD008FC1D4 /* ExactLenghtValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExactLenghtValidator.swift; sourceTree = "<group>"; };
 		C61391862002502300A14CBF /* MinimumLengthValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthValidator.swift; sourceTree = "<group>"; };
 		C61391882002504700A14CBF /* MinimumLengthConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumLengthConditions.swift; sourceTree = "<group>"; };
+		C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmartPassPinValidator.swift; sourceTree = "<group>"; };
+		C675F1032005E8540023C89E /* PinPalindromeCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinPalindromeCondition.swift; sourceTree = "<group>"; };
+		C675F1052005E8740023C89E /* PinSeriesCondition.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinSeriesCondition.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -278,6 +284,8 @@
 			children = (
 				0094D6961C46B23D00145F5C /* Logic */,
 				0032C1091C4555200023DB19 /* AlphabeticCondition.swift */,
+				C675F1032005E8540023C89E /* PinPalindromeCondition.swift */,
+				C675F1052005E8740023C89E /* PinSeriesCondition.swift */,
 				003E061E1C463CEB008D47F2 /* AlphanumericCondition.swift */,
 				BAF88F1F1DCA3BFF001845D1 /* CreditCardCondition.swift */,
 				0094D6751C4696F400145F5C /* EmailCondition.swift */,
@@ -301,6 +309,7 @@
 				003E06281C4648E5008D47F2 /* AlphabeticValidator.swift */,
 				0049139B1C47AC8200471F53 /* AlphanumericValidator.swift */,
 				BAF88F251DCA4166001845D1 /* CreditCardValidator.swift */,
+				C675F1012005DEA80023C89E /* SmartPassPinValidator.swift */,
 				004913AF1C47B1B400471F53 /* CompositeValidator.swift */,
 				0049139D1C47ADCA00471F53 /* EmailValidator.swift */,
 				0049139F1C47AE0700471F53 /* NumericValidator.swift */,
@@ -570,6 +579,8 @@
 				BAF88F261DCA4166001845D1 /* CreditCardValidator.swift in Sources */,
 				004913A81C47B08C00471F53 /* PasswordStrengthValidator.swift in Sources */,
 				000A5B511E1B8ACD001DC2FF /* AlphabeticConfiguration.swift in Sources */,
+				C675F1062005E8740023C89E /* PinSeriesCondition.swift in Sources */,
+				C675F1042005E8540023C89E /* PinPalindromeCondition.swift in Sources */,
 				0094D67B1C4698CE00145F5C /* NumericCondition.swift in Sources */,
 				8DB69F321FDC0A8C00D36173 /* Language.swift in Sources */,
 				000A5B571E1B8EB4001DC2FF /* ConfigurableCondition.swift in Sources */,
@@ -577,6 +588,7 @@
 				002DDD091E1D2DFB007796C6 /* PostcodeConfiguration.swift in Sources */,
 				0049139E1C47ADCA00471F53 /* EmailValidator.swift in Sources */,
 				00F2E2DA1C46C53500FE0B66 /* NotCondition.swift in Sources */,
+				C675F1022005DEA80023C89E /* SmartPassPinValidator.swift in Sources */,
 				0094D6861C469C2A00145F5C /* URLShorthandCondition.swift in Sources */,
 				C6011D2D200259AD008FC1D4 /* ExactLenghtValidator.swift in Sources */,
 				004913B01C47B1B400471F53 /* CompositeValidator.swift in Sources */,
