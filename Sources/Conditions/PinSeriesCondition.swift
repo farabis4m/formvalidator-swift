@@ -18,7 +18,6 @@ public struct PinSeriesCondition: Condition {
     
     public var errorCode: String = ""
     
-    public var minimumValue : AnyObject?
     // MARK: - Initializers
     
     public init() { }
@@ -29,28 +28,23 @@ public struct PinSeriesCondition: Condition {
     }
     
     public func check(_ value: AnyObject?) -> Bool {
-        return self.sequenceValidate(value: value) && self.validateRepeatation(value: value)
+        return self.validateRepeatation(value: value) && self.sequenceValidate(value: value)
     }
     
     
     func sequenceValidate(value: AnyObject?) -> Bool {
         
-        let length: Int = (value?.length) ?? 0
-        let firstValue = value?.character(at: 0)
-        
-        if let firstValue = firstValue, let valueAtIndex1 = (value?.character(at: 1))  {
-            for i in 0..<length {
-                if (valueAtIndex1 - firstValue != i) {
-                    return true
-                }
-            }
+        if let values = value {
+            let valuelist = String(describing: values).flatMap{Int(String($0))}
+            let consecutives = valuelist.map { $0 - 1 }.dropFirst() == valuelist.dropLast()
+            return !consecutives
         }
+        return true
         
-        return false
     }
     
     func validateRepeatation(value: AnyObject?) -> Bool {
-       
+        
         let length: Int = (value?.length) ?? 0
         for i in 0..<length {
             var count: Int = 0
@@ -66,8 +60,8 @@ public struct PinSeriesCondition: Condition {
         }
         return true
     }
-
 }
+
 
 
 

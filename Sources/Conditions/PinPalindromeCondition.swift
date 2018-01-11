@@ -19,6 +19,7 @@ public struct PinPalindromeCondition: Condition {
     public var errorCode: String = ""
     
     public var minimumValue : AnyObject?
+    
     // MARK: - Initializers
     
     public init() { }
@@ -31,14 +32,14 @@ public struct PinPalindromeCondition: Condition {
     public func check(_ value: AnyObject?) -> Bool {
         
         let length: Int = (value?.length) ?? 0
-  
+        
         for i in 0..<length / 2 {
             if value?.character(at: i) != value?.character(at: (length - 1 - i)) {
                 return true
             }
         }
-        
         return false
         
     }
 }
+

@@ -19,23 +19,22 @@ public struct SmartPassPinValidator: Validator {
     
     public init() {
         
-        conditions = [MinimumLengthConditions(),PinPalindromeCondition(errorCode: "6000027"),PinSeriesCondition(errorCode: "6000027")]
+        conditions = [PinPalindromeCondition(),PinSeriesCondition()]
         
     }
-
-    public static func checkValue(ioValue: AnyObject?, errorCode:String) throws -> Bool {
+    
+    public static func checkValue(ioValue: AnyObject?) throws -> Bool {
         
         let validator = SmartPassPinValidator()
         let conditions = validator.checkConditions(ioValue)
-        //         validator.errorCode = errorCode
+        //        validator.errorCode = errorCode
         
         guard conditions == nil else {
-            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode("6000027") {
                 throw error
             }
             return false
         }
-        
         return true
     }
     
