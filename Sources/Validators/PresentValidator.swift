@@ -54,10 +54,14 @@ public struct PresentValidator: Validator {
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
+            
             if error == nil {
-                if let err =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "") {
-                    throw err
-                }
+                error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "")
+                
+            }
+            
+            if let error = error {
+                throw error
             }
             return false
         }
