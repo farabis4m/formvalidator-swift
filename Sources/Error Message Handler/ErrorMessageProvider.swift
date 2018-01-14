@@ -8,16 +8,16 @@
 
 import Foundation
 
-class ErrorMessageProvider {
+public class ErrorMessageProvider {
     
-    static let sharedInstance = ErrorMessageProvider()
+    public static let sharedInstance = ErrorMessageProvider()
     init() {
         // initialization
     }
     
-    func errorWithCode(_ errorCode: String) -> Error? {
+    public func errorWithCode(_ errorCode: String) -> Error? {
         return error(code: errorCode, parameters: "") ?? NSError(domain:"", code: 0, userInfo:nil)
-       // return nil
+        // return nil
     }
     
     public func error(code: String, parameters: CVarArg...) -> Error? {
@@ -47,3 +47,4 @@ extension String {
     }
     var count: Int { return characters.count }
 }
+
