@@ -16,8 +16,8 @@ class ErrorMessageProvider {
     }
     
     func errorWithCode(_ errorCode: String) -> Error? {
-       // return error(code: errorCode, parameters: nil) ?? NSError(domain:"", code: 0, userInfo:nil)
-        return nil
+        return error(code: errorCode, parameters: "") ?? NSError(domain:"", code: 0, userInfo:nil)
+       // return nil
     }
     
     public func error(code: String, parameters: CVarArg...) -> Error? {
