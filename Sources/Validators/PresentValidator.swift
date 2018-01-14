@@ -47,15 +47,17 @@ public struct PresentValidator: Validator {
         return true
     }
     
-    public static func checkValue(ioValue: AnyObject?, errorCode: String?, error: Error?) throws -> Bool {
+    public static func checkValue(ioValue: AnyObject?, errorCode: String?, error: inout Error?) throws -> Bool {
         
         let validator = PresentValidator(errorCode: errorCode ?? "", error: error)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
-            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "") {
-                throw error
+            if error == nil {
+                if let err =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "") {
+                    throw err
+                }
             }
             return false
         }
