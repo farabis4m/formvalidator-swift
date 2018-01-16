@@ -27,14 +27,19 @@ public struct ExactLenghtValidator: Validator {
         conditions = [presentCondition,exactLengthCondition]
     }
     
-    public static func checkValue(ioValue: AnyObject?, exactLength:Int?, errorCode:String?, error: Error?) throws -> Bool {
+    public static func checkValue(ioValue: AnyObject?, exactLength:Int?, errorCode:String?, error: inout Error?) throws -> Bool {
         
         let validator = ExactLenghtValidator(exactLength: exactLength, errorCode: errorCode ?? "", error: error)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
-            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "") {
+            if error == nil {
+                error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode ?? "")
+                
+            }
+            
+            if let error = error {
                 throw error
             }
             return false
