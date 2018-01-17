@@ -33,10 +33,10 @@ public struct ExactLengthCondition: Condition {
     }
     
     public func check(_ value: AnyObject?) -> Bool {
-        let valueLength = value
-        
-        if valueLength?.count == exactLength {
+        if let isString = value as? String, isString.count == exactLength {
             return true
+        } else if let length = value as? Int {
+            return length == exactLength
         }
         
         return false
