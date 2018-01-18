@@ -35,15 +35,12 @@ public struct LengthRangeCondition: Condition {
     }
     
     public func check(_ value: AnyObject?) -> Bool {
-        
-        if String(describing: value).count > 0 {
-            let valuesCount = String(describing: value).trimmingCharacters(in: CharacterSet.whitespaces).count
+        if let stringValue = value as? String {
+            let valuesCount = stringValue.trimmingCharacters(in: CharacterSet.whitespaces).count
             return valuesCount >= minLength ?? 0 && valuesCount <= maxLength ?? 0
-        }else {
-            return false
         }
         
+        return false
     }
-    
 }
 
