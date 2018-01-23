@@ -6,7 +6,6 @@
 //  Copyright © 2018 ustwo. All rights reserved.
 //
 
-import Foundation
 
 public struct DCRPasswordCondition: Condition {
     
@@ -32,23 +31,22 @@ public struct DCRPasswordCondition: Condition {
     
     public init() { }
     
-    init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?, error: Error?) {
+    init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?) {
         self.init()
         self.maxLength = maxLength
         self.minLength = minLength
         self.allowedNumbers = allowedNumbers
         self.notAllowedCharacter = notAllowedCharacter
-        self.error = error
     }
     
-    public func check(_ value: AnyObject?) -> Bool {
-//        if let isString = value as? String, isString.count == exactLength {
-//            return true
-//        } else if let length = value as? Int {
-//            return length == exactLength
-//        }
-        
-        return false
-    }
+//    public func check(_ value: AnyObject?) -> Bool {
+//        //        if let isString = value as? String, isString.count == exactLength {
+//        //            return true
+//        //        } else if let length = value as? Int {
+//        //            return length == exactLength
+//        //        }
+//        
+//        return false
+//    }
     
 }

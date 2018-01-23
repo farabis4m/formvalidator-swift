@@ -21,24 +21,20 @@ public struct DCRPasswordValidator: Validator {
         conditions = [DCRPasswordCondition()]
     }
     
-    public init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?, error: Error?) {
-        let presentCondition = PresentCondition(errorCode: "6000009", error: error)
-        let lengthRangeValidation = LengthRangeCondition(minLength: minLength, maxLength: maxLength, errorCode: "6000012", error: error)
+    public init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?) {
+        let presentCondition = PresentCondition(errorCode: "6000009", error: nil)
+        let lengthRangeValidation = LengthRangeCondition(minLength: minLength, maxLength: maxLength, errorCode: "6000012", error: nil)
         conditions = [presentCondition,lengthRangeValidation]
     }
     
-    public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, error: inout Error?) throws -> Bool {
+    public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?) throws -> Bool {
         
-        let validator = DCRPasswordValidator(minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers,error: error)
+        let validator = DCRPasswordValidator(minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
-            if error == nil {
-                error = ErrorMessageProvider.sharedInstance.errorWithCode("")
-            }
-            
-            if let error = error {
+            if let error =  ErrorMessageProvider.sharedInstance.errorWithCode("") {
                 throw error
             }
             return false
@@ -48,3 +44,4 @@ public struct DCRPasswordValidator: Validator {
     }
     
 }
+
