@@ -26,7 +26,10 @@ public struct DCRPasswordValidator: Validator {
         self.init()
         let presentCondition = PresentCondition(errorCode: "6000009", error: nil)
         let lengthRangeValidation = LengthRangeCondition(minLength: minLength, maxLength: maxLength, errorCode: "6000012", error: nil)
-        conditions = [presentCondition,lengthRangeValidation]
+        let specialCharecterValidation = DCRSpecialCharecterCondition(unAllowedCharacterSet: notAllowedCharacter, errorCode: "6000013", error: nil)
+        let numericValidation = DCRNumericCondition(AllowednumberSet: allowedNumbers, errorCode: "6000014", error: nil)
+        
+        conditions = [presentCondition,lengthRangeValidation,specialCharecterValidation,numericValidation]
     }
     
     public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, errorCode: inout String) throws -> Bool {
@@ -46,6 +49,18 @@ public struct DCRPasswordValidator: Validator {
             } else if let lengthRangeCondition = conditions?.first as? LengthRangeCondition {
                 errorCode = lengthRangeCondition.errorCode
                 if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: minLength ?? 0, maxLength ?? 0) {
+                    throw error
+                }
+                return false
+            }else if let specialCharecterCondition = conditions?.first as? DCRSpecialCharecterCondition {
+                errorCode = specialCharecterCondition.errorCode
+                if let error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+                    throw error
+                }
+                return false
+            }else if let numericCondition = conditions?.first as? DCRNumericCondition {
+                errorCode = numericCondition.errorCode
+                if let error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
                     throw error
                 }
                 return false
