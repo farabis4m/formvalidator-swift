@@ -54,13 +54,13 @@ public struct DCRPasswordValidator: Validator {
                 return false
             }else if let specialCharecterCondition = conditions?.first as? DCRSpecialCharecterCondition {
                 errorCode = specialCharecterCondition.errorCode
-                if let error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+                if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: notAllowedCharacter ?? "") {
                     throw error
                 }
                 return false
             }else if let numericCondition = conditions?.first as? DCRNumericCondition {
                 errorCode = numericCondition.errorCode
-                if let error = ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
+                if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: allowedNumbers ?? "") {
                     throw error
                 }
                 return false
@@ -74,4 +74,3 @@ public struct DCRPasswordValidator: Validator {
     
     
 }
-
