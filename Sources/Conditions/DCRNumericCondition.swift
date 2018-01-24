@@ -34,10 +34,15 @@ public struct DCRNumericCondition: Condition {
 
     public func check(_ value: AnyObject?) -> Bool {
         if let isString = value as? String {
-
-            let passwordRegex = "^[A-Za-z0-9_.]+$"
-            return NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: isString)
-
+            
+            let capitalLetterRegEx  = ".*[a-zA-Z]+.*"
+            let texttest = NSPredicate(format:"SELF MATCHES %@", capitalLetterRegEx)
+            guard texttest.evaluate(with: isString) else { return false }
+            
+            let numberRegEx  = ".*[0-9]+.*"
+            let texttest1 = NSPredicate(format:"SELF MATCHES %@", numberRegEx)
+            guard texttest1.evaluate(with: isString) else { return false }
+            
         }
         return true
     }
