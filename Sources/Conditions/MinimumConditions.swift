@@ -9,7 +9,7 @@
 import Foundation
 
 public struct MinimumConditions: Condition {
-
+    
     public var localizedViolationString: String = ""
     
     public var regex: String = ""
@@ -38,11 +38,16 @@ public struct MinimumConditions: Condition {
             minValue = (f.number(from: minValue as? String ?? "")) ?? 0
         }
         
+        // Validation for Decimal numbers
         if let minValue1 = minValue as? NSDecimalNumber, let minValue2 = self.minimumValue as? NSDecimalNumber, minValue1.compare(minValue2) == .orderedAscending {
+            return false
+        }
+        
+        // Validation for Date
+        if let minValueDate = minValue as? Date, let minValueDate1 = self.minimumValue as? Date, minValueDate.compare(minValueDate1) == .orderedAscending {
             return false
         }
         
         return true
     }
 }
-
