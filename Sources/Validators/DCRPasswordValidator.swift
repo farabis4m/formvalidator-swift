@@ -33,12 +33,17 @@ public struct DCRPasswordValidator: Validator {
     }
     
     public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, errorCode: inout String) throws -> Bool {
+        return try checkValue(ioValue: ioValue, minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers, replaceBlankSPaceWithStringForSpecialChar: false, errorCode: &errorCode)
+    }
+    
+    
+    public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?,replaceBlankSPaceWithStringForSpecialChar:Bool,  errorCode: inout String) throws -> Bool {
+        
         let validator = DCRPasswordValidator(minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
         guard conditions == nil else {
-            var error: Error?
             if let presentCondition = conditions?.first as? PresentCondition {
                 errorCode = presentCondition.errorCode
                 if let error =  ErrorMessageProvider.sharedInstance.errorWithCode(errorCode) {
@@ -54,12 +59,16 @@ public struct DCRPasswordValidator: Validator {
                 return false
             }else if let specialCharecterCondition = conditions?.first as? DCRSpecialCharecterCondition {
                 errorCode = specialCharecterCondition.errorCode
-                if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: notAllowedCharacter ?? "") {
+                var param = notAllowedCharacter ?? ""
+                if replaceBlankSPaceWithStringForSpecialChar {
+                    param = param.replacingOccurrences(of: " ", with: " Blank Space ")
+                }
+                if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: param ) {
                     throw error
                 }
                 return false
             }else if let numericCondition = conditions?.first as? DCRNumericCondition {
-                errorCode = numericCondition.errorCode
+               let errorCode = numericCondition.errorCode
                 if let error = ErrorMessageProvider.sharedInstance.error(code: errorCode, parameters: allowedNumbers ?? "") {
                     throw error
                 }
