@@ -53,6 +53,7 @@
 		00F2E2DA1C46C53500FE0B66 /* NotCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2D91C46C53500FE0B66 /* NotCondition.swift */; };
 		00F2E2DE1C46C69D00FE0B66 /* PresentCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2DD1C46C69D00FE0B66 /* PresentCondition.swift */; };
 		00F2E2E21C46C7B500FE0B66 /* PasswordStrengthCondition.swift in Sources */ = {isa = PBXBuildFile; fileRef = 00F2E2E11C46C7B500FE0B66 /* PasswordStrengthCondition.swift */; };
+		8D5ABA82207F43FE00210BF7 /* DCRSecretAnswerValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D5ABA81207F43FE00210BF7 /* DCRSecretAnswerValidator.swift */; };
 		8D9D24071FDD32D5008719A8 /* MinimumValueValidator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D24061FDD32D5008719A8 /* MinimumValueValidator.swift */; };
 		8D9D24091FDD3626008719A8 /* MinimumConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8D9D24081FDD3626008719A8 /* MinimumConditions.swift */; };
 		8DB69F2E1FDBF1B100D36173 /* ErrorMessageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DB69F2D1FDBF1B100D36173 /* ErrorMessageProvider.swift */; };
@@ -173,6 +174,7 @@
 		00F2E2E31C46CBC200FE0B66 /* PasswordStrengthConditionTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PasswordStrengthConditionTests.swift; sourceTree = "<group>"; };
 		88644DA61E2967F7006B0150 /* ValidatorTextFieldTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorTextFieldTests.swift; path = Controls/ValidatorTextFieldTests.swift; sourceTree = "<group>"; };
 		88644DA81E296AEC006B0150 /* ValidatorTextViewTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ValidatorTextViewTests.swift; path = Controls/ValidatorTextViewTests.swift; sourceTree = "<group>"; };
+		8D5ABA81207F43FE00210BF7 /* DCRSecretAnswerValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DCRSecretAnswerValidator.swift; sourceTree = "<group>"; };
 		8D9D24061FDD32D5008719A8 /* MinimumValueValidator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumValueValidator.swift; sourceTree = "<group>"; };
 		8D9D24081FDD3626008719A8 /* MinimumConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MinimumConditions.swift; sourceTree = "<group>"; };
 		8DB69F2D1FDBF1B100D36173 /* ErrorMessageProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorMessageProvider.swift; sourceTree = "<group>"; };
@@ -341,6 +343,7 @@
 				0049139F1C47AE0700471F53 /* NumericValidator.swift */,
 				004913A71C47B08C00471F53 /* PasswordStrengthValidator.swift */,
 				C619C96D2017310500FB0286 /* DCRPasswordValidator.swift */,
+				8D5ABA81207F43FE00210BF7 /* DCRSecretAnswerValidator.swift */,
 				C6BE63222018AF6E00227DA0 /* DCRSpecialCharecterValidator.swift */,
 				C6BE63272018B44F00227DA0 /* DCRNumericValidatior.swift */,
 				004913A11C47AE5D00471F53 /* PostcodeValidator.swift */,
@@ -645,6 +648,7 @@
 				000A5B631E1B9522001DC2FF /* Configuration.swift in Sources */,
 				004913B91C47BEEC00471F53 /* ValidatorTextView-UIKit.swift in Sources */,
 				C619C96C201730DE00FB0286 /* DCRPasswordCondition.swift in Sources */,
+				8D5ABA82207F43FE00210BF7 /* DCRSecretAnswerValidator.swift in Sources */,
 				8DB69F301FDC0A3500D36173 /* PlistManager.swift in Sources */,
 				00A6A0A91E1D023100EDB521 /* CreditCardConfiguration.swift in Sources */,
 				0032C1071C454F4E0023DB19 /* Condition.swift in Sources */,
