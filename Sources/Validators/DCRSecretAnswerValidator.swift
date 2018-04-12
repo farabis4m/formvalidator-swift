@@ -29,7 +29,7 @@ public struct DCRSecretAnswerValidator: Validator {
     }
     
     public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, errorCode: inout String) throws -> Bool {
-        let validator = DCRPasswordValidator(minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers)
+        let validator = DCRSecretAnswerValidator(minLength: minLength, maxLength: maxLength, notAllowedCharacter: notAllowedCharacter, allowedNumbers: allowedNumbers)
         let conditions = validator.checkConditions(ioValue)
         //         validator.errorCode = errorCode
         
