@@ -15,7 +15,7 @@ public struct DCRSecretAnswerValidator: Validator {
     public var conditions: [Condition]
     
     public init() {
-        conditions = [DCRPasswordCondition()]
+        conditions = [DCRSecretAnswerValidator()]
     }
     
     public init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?) {
