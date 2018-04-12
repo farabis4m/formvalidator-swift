@@ -15,7 +15,7 @@ public struct DCRSecretAnswerValidator: Validator {
     public var conditions: [Condition]
     
     public init() {
-        conditions = [DCRSecretAnswerValidator()]
+        conditions = [DCRSecretAnswerCondition()]
     }
     
     public init(minLength: Int?,maxLength: Int?, notAllowedCharacter: String?, allowedNumbers: String?) {
@@ -24,9 +24,8 @@ public struct DCRSecretAnswerValidator: Validator {
         let presentCondition = PresentCondition(errorCode: "6000030", error: nil)
         let lengthRangeValidation = LengthRangeCondition(minLength: minLength, maxLength: maxLength, errorCode: "6000012", error: nil)
         let specialCharecterValidation = DCRSpecialCharecterCondition(unAllowedCharacterSet: notAllowedCharacter, errorCode: "6000033", error: nil)
-        let numericValidation = DCRNumericCondition(AllowednumberSet: allowedNumbers, errorCode: "6000034", error: nil)
-        
-        conditions = [presentCondition,lengthRangeValidation,specialCharecterValidation,numericValidation]
+
+        conditions = [presentCondition,lengthRangeValidation,specialCharecterValidation]
     }
     
     public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, errorCode: inout String) throws -> Bool {
