@@ -22,10 +22,10 @@ public struct DCRSecretAnswerValidator: Validator {
         
         self.init()
         let presentCondition = PresentCondition(errorCode: "6000030", error: nil)
-        let lengthRangeValidation = MinimumLengthValidator.checkValue(ioValue: ioValue.pointee, minLength: 4, errorCode: "6000015")
+        let lengthRangeCondition = MinimumLengthConditions(minimumLength: minLength, errorCode: "6000015")
         let specialCharecterValidation = DCRSpecialCharecterCondition(unAllowedCharacterSet: notAllowedCharacter, errorCode: "6000035", error: nil)
 
-        conditions = [presentCondition,lengthRangeValidation,specialCharecterValidation]
+        conditions = [presentCondition,lengthRangeCondition,specialCharecterValidation]
     }
     
     public static func checkValue(ioValue: AnyObject?, minLength:Int?, maxLength:Int?, notAllowedCharacter:String?, allowedNumbers:String?, errorCode: inout String) throws -> Bool {
