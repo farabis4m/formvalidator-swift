@@ -23,7 +23,7 @@ public struct DCRSecretAnswerValidator: Validator {
         self.init()
         let presentCondition = PresentCondition(errorCode: "6000030", error: nil)
         let minimumLengthCondition = MinimumLengthConditions(minimumLength: minLength, errorCode: "6000015")
-        let specialCharecterCondition = DCRSpecialCharecterCondition(unAllowedCharacterSet: notAllowedCharacter, errorCode: "6000035", error: nil)
+        let specialCharecterCondition = DCRSpecialCharecterCondition(unAllowedCharacterSet: notAllowedCharacter, errorCode: "6000033", error: nil)
 
         conditions = [presentCondition,minimumLengthCondition,specialCharecterCondition]
     }
